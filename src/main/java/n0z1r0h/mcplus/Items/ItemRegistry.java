@@ -21,7 +21,9 @@ public class ItemRegistry {
         return item;
     }
 
-    public static Item TEMPLATE = register("template", Item::new, new Item.Settings());
+    // Template declaration & initialization:
+    // public static Item TEMPLATE = register("template", Item::new, new Item.Settings());
+    public static Item PINECONE = register("pinecone", Item::new, new Item.Settings().maxCount(128));
 
     public static void init() {}
 }
