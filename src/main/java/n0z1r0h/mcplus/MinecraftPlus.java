@@ -1,5 +1,6 @@
 package n0z1r0h.mcplus;
 
+import n0z1r0h.mcplus.Items.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public class MinecraftPlus implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+		ItemRegistry.init();
 
 		LOGGER.info("Hello Fabric world!");
 	}
