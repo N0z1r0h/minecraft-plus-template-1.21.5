@@ -17,7 +17,11 @@ public class ItemRegistry {
         Item item = itemFactory.apply(settings.registryKey(itemKey));
 
         Registry.register(Registries.ITEM, itemKey, item);
-        
+
         return item;
     }
+
+    public static Item TEMPLATE = register("template", Item::new, new Item.Settings());
+
+    public static void init() {}
 }
